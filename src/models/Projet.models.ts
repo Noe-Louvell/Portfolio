@@ -1,4 +1,4 @@
-interface projet_interface {
+export interface IProjet {
     id: number
     titre: string,
     sous_titre?: string,
@@ -9,5 +9,3 @@ interface projet_interface {
     groupe?:boolean,
     type:string,
 }
-
-export default projet_interface

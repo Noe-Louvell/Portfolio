@@ -1,43 +1,40 @@
-import React from 'react';
-
-import projet_interface from '../interface/projet';
-interface projet_props {
-    data_projet: projet_interface[];
+import React, { FunctionComponent } from 'react';
+import { IProjet } from '../models/Projet.models';
+import styled from 'styled-components';
+import Theme from "../themes/theme";
+interface IProjetProps {
+    data: IProjet[];
 }
+const Card = styled.section`
+    display: flex;
+    width: 70%;
+    border: ${props => `1px solid ${props.theme.colors.onyx}`};
+    background-color: ${props => props.theme.colors.lightBlue};
+    font-family: ${props => props.theme.fonts[0]};
+    margin:15px;
+    padding:15px;
+`;
 
-export const Projet: React.FC<projet_props> = ({ data_projet }: projet_props) => {
 
-    return <div>
-        {data_projet.map(({ id, titre, sous_titre, description, lien, image, status, groupe, type }) => {
-            return <ProjetItem key={id}
-                id={id}
-                titre={titre}
-                sous_titre={sous_titre}
-                description={description}
-                lien={lien}
-                image={image}
-                status={status}
-                groupe={groupe}
-                type={type}>
-            </ProjetItem>
+
+export const Projet: FunctionComponent<IProjetProps> = ({ data = [] }) => {
+
+
+    return <Theme>
+
+
+        {data.map(({ id, titre, sous_titre, description, lien, image, status = true, groupe = false, type }, index) => {
+            return <Card key={id}>
+                <h3>{titre}</h3>
+                <h5>{sous_titre}</h5>
+                </Card>
+
         })}
-    </div>
 
+
+    </Theme>
 }
 
-const ProjetItem: React.FC<projet_interface> = ({ id, titre, sous_titre, description, lien, image, status, groupe = false, type }: projet_interface) => {
 
-    return <div className="card-box">
-        <div className="card-verso">
-            <h1>{titre}</h1>
-            <h3>{sous_titre}</h3>
-            <img src={image} alt="Ilustration du projet" />
-        </div>
-
-        <div className="card-recto">
-            <h1>{titre}</h1>
-        </div>
-
-    </div>
-}
+export default Projet;
 
