@@ -8,8 +8,8 @@ interface IProjetProps {
 const Card = styled.section`
     display: flex;
     width: 70%;
-    border: ${props => `1px solid ${props.theme.colors.onyx}`};
-    background-color: ${props => props.theme.colors.lightBlue};
+    border: ${props => `1px solid ${props.theme.colors.black}`};
+    background-color: ${props => props.theme.colors.primary};
     font-family: ${props => props.theme.fonts[0]};
     margin:15px;
     padding:15px;

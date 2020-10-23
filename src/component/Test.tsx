@@ -3,9 +3,9 @@ import Theme from "../themes/theme";
 import styled from "styled-components";
 
 const Container = styled.div`
-    width: 70%;
-    border: ${props => `1px solid ${props.theme.colors.onyx}`};
-    background-color: ${props => props.theme.colors.lightBlue};
+    width: 30%;
+    border: ${props => `1px solid ${props.theme.colors.black}`};
+    background-color: ${props => props.theme.colors.primary};
     font-family: ${props => props.theme.fonts[0]};
     margin:15px;
     padding:15px;
@@ -21,12 +21,12 @@ const ContainerDanger = styled(Container)`
 const Heading = styled.h1`
     font-size: ${({ theme: { fontSizes } }) =>
         fontSizes.small};
-    color: ${({ theme: { colors } }) => colors.persianGreen};
+    color: ${({ theme: { colors } }) => colors.secondary};
 `;
 
 const HeadingDanger = styled(Heading)`
     
-    color: ${({ theme: { colors } }) => colors.powderWhite};
+    color: ${({ theme: { colors } }) => colors.white};
 `;
 
 const TestTheme = () => {

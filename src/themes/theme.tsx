@@ -9,11 +9,13 @@ interface IProps {
 
 const theme = {
     colors: {
-        powderWhite: "#FFFDF9",
-        persianGreen: "#06B49A",
-        lightBlue: "#AFDBD2",
-        onyx: "#36313D",
-        danger: "#fd0b0b"
+        primary: "#AFDBD2",
+        secondary: "#06B49A",
+        danger: "#fd0b0b",
+
+        black: "#36313D",
+        white: "#FFFDF9",
+        
     },
     fonts: ["sans-serif", "Roboto"],
     fontSizes: {
