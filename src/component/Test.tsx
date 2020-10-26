@@ -35,7 +35,7 @@ const TestTheme = () => {
             <Container>
                 <Heading>Hello World</Heading>
                 <h2>By the power of styled-components!</h2>
-              
+                <h2>By the power of styled-components!</h2>
             </Container>
 
             <ContainerDanger>
